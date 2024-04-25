@@ -42,7 +42,6 @@ function moverAliens() {
   let bordaEsquerda = alieniginasInvasores[0] % largura === 0;
   let bordaDireita = alieniginasInvasores[alieniginasInvasores.length - 1] % largura === largura - 1;
   removerAliens();
-  vitoriaOuDerrotaMaisPlacar();
 
   if (aliensVaParaDireita && bordaDireita) {
      for (let i = 0; i < alieniginasInvasores.length; i++) {
@@ -66,6 +65,7 @@ function moverAliens() {
   }
 
   adicionarAliens();
+  vitoriaOuDerrotaMaisPlacar();
 }
 
 movendoAliens = setInterval(() => {
